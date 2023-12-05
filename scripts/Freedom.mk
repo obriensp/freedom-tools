@@ -51,7 +51,8 @@ OBJDIR_PREFIX ?= ../../
 BINDIR := $(BINDIR_PREFIX)bin
 OBJDIR := $(OBJDIR_PREFIX)obj
 
-UBUNTU64 ?= x86_64-linux-ubuntu14
+HOST_ARCH ?= $(shell uname -m)
+UBUNTU64 ?= $(HOST_ARCH)-linux-ubuntu14
 REDHAT ?= x86_64-linux-centos6
 WIN64  ?= x86_64-w64-mingw32
 DARWIN ?= x86_64-apple-darwin

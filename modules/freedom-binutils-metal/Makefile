@@ -16,7 +16,7 @@ BARE_METAL_CXX_FOR_TARGET ?= $(BARE_METAL_TUPLE)-g++
 # Some special package configure flags for specific targets
 $(WIN64)-binutils-host          := --host=$(WIN64)
 $(WIN64)-binutils-configure     := --with-included-gettext
-$(UBUNTU64)-binutils-host       := --host=x86_64-linux-gnu
+$(UBUNTU64)-binutils-host       := --host=$(HOST_ARCH)-linux-gnu
 $(UBUNTU64)-binutils-configure  := --with-included-gettext
 $(DARWIN)-binutils-configure    := --with-included-gettext
 $(REDHAT)-binutils-configure    := --with-included-gettext

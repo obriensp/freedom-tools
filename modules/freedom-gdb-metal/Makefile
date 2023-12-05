@@ -16,8 +16,8 @@ BARE_METAL_CXX_FOR_TARGET ?= $(BARE_METAL_TUPLE)-g++
 # Some special package configure flags for specific targets
 $(WIN64)-gdb-host            := --host=$(WIN64)
 $(WIN64)-expat-configure     := --host=$(WIN64)
-$(UBUNTU64)-gdb-host         := --host=x86_64-linux-gnu
-$(UBUNTU64)-expat-configure  := --host=x86_64-linux-gnu
+$(UBUNTU64)-gdb-host         := --host=$(HOST_ARCH)-linux-gnu
+$(UBUNTU64)-expat-configure  := --host=$(HOST_ARCH)-linux-gnu
 $(DARWIN)-gdb-host           := --with-liblzma-prefix=/usr
 $(DARWIN)-expat-configure    := --disable-shared --enable-static
 
