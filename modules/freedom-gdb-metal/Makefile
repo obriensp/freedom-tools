@@ -81,7 +81,7 @@ $(OBJDIR)/%/build/$(PACKAGE_HEADING)/source.stamp:
 	cd $(dir $@); $(TAR) -xf expat-2.2.0.tar.bz2
 	cd $(dir $@); mv expat-2.2.0 expat
 	mkdir -p $($@_INSTALL)/python
-	cd $(dir $@); curl -L -f -s -o python-3.7.7-$($@_TARGET).tar.gz https://github.com/sifive/freedom-tools-resources/releases/download/v0-test1/python-3.7.7-$($@_TARGET).tar.gz
+	cd $(dir $@); curl -L -f -s -o python-3.7.7-$($@_TARGET).tar.gz https://github.com/obriensp/freedom-tools-resources/releases/download/v0.1.0-alpha0/python-3.7.7-$($@_TARGET).tar.gz
 	cd $($@_INSTALL)/python; $(TAR) -xf $(abspath $(dir $@))/python-3.7.7-$($@_TARGET).tar.gz
 	cd $(dir $@); rm python-3.7.7-$($@_TARGET).tar.gz
 	cp patches/pyconfig-x86_64-apple-darwin.sh $($@_INSTALL)/python
