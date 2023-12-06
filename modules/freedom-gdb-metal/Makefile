@@ -84,6 +84,7 @@ $(OBJDIR)/%/build/$(PACKAGE_HEADING)/source.stamp:
 	cd $(dir $@); curl -L -f -s -o python-3.7.7-$($@_TARGET).tar.gz https://github.com/obriensp/freedom-tools-resources/releases/download/v0.1.0-alpha0/python-3.7.7-$($@_TARGET).tar.gz
 	cd $($@_INSTALL)/python; $(TAR) -xf $(abspath $(dir $@))/python-3.7.7-$($@_TARGET).tar.gz
 	cd $(dir $@); rm python-3.7.7-$($@_TARGET).tar.gz
+	cp patches/pyconfig-aarch64-linux-ubuntu14.sh $($@_INSTALL)/python
 	cp patches/pyconfig-x86_64-apple-darwin.sh $($@_INSTALL)/python
 	cp patches/pyconfig-x86_64-linux-centos6.sh $($@_INSTALL)/python
 	cp patches/pyconfig-x86_64-linux-ubuntu14.sh $($@_INSTALL)/python
