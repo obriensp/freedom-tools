@@ -95,9 +95,9 @@ $(WIN64)-binutils-host          := --host=$(WIN64)
 $(WIN64)-binutils-configure     := --with-included-gettext
 $(WIN64)-gcc-host               := --host=$(WIN64)
 $(WIN64)-gcc-configure          := --without-system-zlib
-$(UBUNTU64)-binutils-host       := --host=x86_64-linux-gnu
+$(UBUNTU64)-binutils-host       := --host=$(HOST_ARCH)-linux-gnu
 $(UBUNTU64)-binutils-configure  := --with-included-gettext
-$(UBUNTU64)-gcc-host            := --host=x86_64-linux-gnu
+$(UBUNTU64)-gcc-host            := --host=$(HOST_ARCH)-linux-gnu
 $(UBUNTU64)-gcc-configure       := --with-system-zlib
 $(DARWIN)-binutils-configure    := --with-included-gettext
 $(DARWIN)-gcc-configure         := --with-system-zlib
